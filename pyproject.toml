@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hello-agents"
+version = "0.0.0"
+description = "HelloAgents"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "python-dotenv>=1.0.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "."}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["hello_agents*"]
+exclude = ["test_examples*"]
